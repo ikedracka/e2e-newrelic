@@ -9,7 +9,7 @@ export default function getAnrScript() {
   let func = '';
 
   if(accountID && trustKey && agentID && browserLicenseKey && applicationID) {
-    func += `;window.NREUM||(NREUM={});NREUM.init={distributed_tracing:{enabled:true},privacy:{cookies_enabled:true}};`
+    func += `;window.NREUM||(NREUM={});NREUM.init={distributed_tracing:{enabled:true,exclude_newrelic_header:true,cors_use_newrelic_header:false,cors_use_tracecontext_headers:true},privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]}};`
     func += `;NREUM.loader_config={accountID:"${accountID}",trustKey:"${trustKey}",agentID:"${agentID}",licenseKey:"${browserLicenseKey}",applicationID:"${applicationID}"};`
     func += `;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"${browserLicenseKey}",applicationID:"${applicationID}",sa:1};`
     func += String.raw`
