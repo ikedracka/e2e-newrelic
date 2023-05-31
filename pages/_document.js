@@ -3,8 +3,6 @@ import Script from "next/script"
 
 import getAnrScript from '../utils/anr'
 
-
-
 class MyDocument extends Document {
   render() {
     return (
