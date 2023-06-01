@@ -49,7 +49,7 @@ export default function getAnrScript(enablePostRequestsMonitoring = false) {
                     responseBody: JSON.parse(responseBody),
                     duration,
                     payload: JSON.parse(payload),
-                    grapqlOperationName: JSON.parse(payload).operationName || 'no operation name',
+                    graphqlOperationName: JSON.parse(payload).operationName || 'no operation name',
                   });
                 }, 0);
         
