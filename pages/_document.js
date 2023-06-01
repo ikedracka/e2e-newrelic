@@ -10,7 +10,7 @@ class MyDocument extends Document {
         <Head>
           <Script 
             id="atlas-new-relic" 
-            dangerouslySetInnerHTML={{ __html: getAnrScript() }} 
+            dangerouslySetInnerHTML={{ __html: getAnrScript(true) }} 
             strategy="beforeInteractive"
           />
         </Head>
